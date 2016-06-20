@@ -1,0 +1,12 @@
+{
+    "name": "root/workspace",
+    "authors": [
+        {
+            "name": "Hampton Paulk",
+            "email": "hampton@teamtreehouse.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "~1.13"
+    }
+}
