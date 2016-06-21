@@ -11,12 +11,12 @@ date_default_timezone_set('America/New_York');
 
 $app = new \Slim\Slim();
 
-$app->get('/', function(){
-  echo "Hello. This is the home page.";
+$app->get('/', function() use($app){
+  $app->render('index.html');
 });
 
-$app->get('/contact', function(){
-  echo "Feel free to contact us.";
+$app->get('/contact', function() use($app){
+  $app->render('contact.html');
 });
 
 $app->run();
