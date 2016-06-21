@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInite3887d4cd4f1f766047ad7dce52219dd
 {
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Slim\\Views\\' => 11,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -14,6 +18,10 @@ class ComposerStaticInite3887d4cd4f1f766047ad7dce52219dd
     );
 
     public static $prefixDirsPsr4 = array (
+        'Slim\\Views\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/views',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -26,6 +34,13 @@ class ComposerStaticInite3887d4cd4f1f766047ad7dce52219dd
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+        'S' => 
+        array (
+            'Slim' => 
+            array (
+                0 => __DIR__ . '/..' . '/slim/slim',
             ),
         ),
         'P' => 

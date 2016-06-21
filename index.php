@@ -9,14 +9,24 @@ date_default_timezone_set('America/New_York');
 // // $log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
 // // $log->addWarning('Foo');
 
-$app = new \Slim\Slim();
+$app = new \Slim\Slim(array(
+  'view' => new \Slim\Views\Twig()
+));
+
+$view = $app->view();
+$view->parserOptions = array(
+    'debug' => true,
+);
+$view->parserExtensions = array(
+    new \Slim\Views\TwigExtension(),
+);
 
 $app->get('/', function() use($app){
-  $app->render('index.html');
-});
+  $app->render('about.twig');
+})->name('home');
 
 $app->get('/contact', function() use($app){
-  $app->render('contact.html');
-});
+  $app->render('contact.twig');
+})->name('contact');
 
 $app->run();
